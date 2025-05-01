@@ -70,3 +70,9 @@ img {
     width: 150px;
     margin: 40px;
 }
+
+
+.dark {
+    background-color: black;
+    color: white;
+}
