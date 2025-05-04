@@ -12,6 +12,7 @@ function changeTheme() {
     } else {
         document.body.removeAttribute('class');
         document.querySelector('#subtitle').removeAttribute('class');
+        logo.setAttribute('src', 'byui-logo_blue.webp');
     }
 };
 
