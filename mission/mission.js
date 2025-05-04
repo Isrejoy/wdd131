@@ -1,20 +1,18 @@
-let selectElem = document.querySelector('select');
-
-let logo = document.querySelector('img');
-
-
-selectElem.addEventListener('change', changeTheme);
+const themeSelector = document.querySelector('select');
+const logo = document.querySelector('img');
 
 
 function changeTheme() {
-    let current = selectElem.value;
+    let currentTheme = themeSelector.value;
 
-    if (current == 'dark'){
-        document.body.className = 'dark'
-        // give body the dark class
-        // add different image by changing src
+    if (currentTheme == 'dark'){
+        document.body.className = 'dark';
+        document.querySelector('#subtitle').className = 'lighterBlue';  
+        logo.setAttribute('src', 'byui-logo_white.png');
     } else {
-        // take off class
-        // change the image back to original 
+        document.body.removeAttribute('class');
+        document.querySelector('#subtitle').removeAttribute('class');
     }
-}
+};
+
+themeSelector.addEventListener('change', changeTheme);
