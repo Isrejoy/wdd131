@@ -5,6 +5,10 @@ function newTask() {
   const listElement = document.querySelector('#todoList')
   // get the value entered into the #todo input
   const task = document.querySelector('#todo').value;
+  let first = task.split('-')[0];
+  let second = task.split('-')[1];
+  console.log(first);
+  console.log(second);
   // render out the list 
   listElement.innerHTML += `
     <li> ${task}
@@ -28,6 +32,6 @@ function manageTasks(e) {
 }
 
 // Add your event listeners here
-document.querySelector('#submitTask').addEventListener('click', newTask)
-document.querySelector('#todoList').addEventListener('click', manageTasks)
+document.querySelector('#submitTask').addEventListener('click', newTask);
+document.querySelector('#todoList').addEventListener('click', manageTasks);
 // We need to attach listeners to the submit button and the list. Listen for a click, call the 'newTask' function on submit and call the 'manageTasks' function if either of the icons are clicked in the list of tasks.
