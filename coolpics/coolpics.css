@@ -34,7 +34,7 @@ header {
     color: var(--text-light);
 }
 
-.menuButton {
+#menuButton {
     background-color: var(--primary-color);
     border: none;
     font-size: 2em;
@@ -76,7 +76,7 @@ figure {
     padding-bottom: 2.5em;
 }
 
-img {
+figure > img {
     max-width: 100%;
     object-fit: cover;
     width: 250px;
@@ -96,6 +96,37 @@ footer {
     color: var(--text-light);
 }
 
+.hide {
+    display: none;
+}
+
+
+dialog {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    border: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .6);
+    text-align: center;
+}
+
+dialog > img {
+    margin: 15vh auto;
+    max-width: 90%;
+    max-height: 70%;
+    align-self: center;
+}
+
+.close-viewer {
+    position: absolute;
+    top: 15vh;
+}
+
+
 
 @media screen and (min-width: 700px) {
 
@@ -104,9 +135,9 @@ footer {
         padding: 0.5em 0;
     }
 
-    .menuButton {
+    /* #menuButton {
         padding-bottom: 1em;
-    }
+    } */
 
     .gallery {
         grid-template-columns: 1fr 1fr;
@@ -115,10 +146,6 @@ footer {
     .galleryHeading {
         grid-column: 1/3;
         font-size: 1.7em;
-    }
-
-    nav {
-        display: none;
     }
 
 }
@@ -130,11 +157,11 @@ footer {
         padding: 0.3em 0;
     }
     
-    .menuButton {
+    #menuButton {
         display: none;
     }
 
-    nav {
+    .navLink {
         display: flex;
         justify-content: space-evenly;
     }
