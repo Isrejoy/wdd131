@@ -61,7 +61,7 @@ articles.forEach((article) => {
 		`;
 });
 
-console.log(string);
+// console.log(string);
 const newDiv = document.createElement('div');
 newDiv.id = 'book-content';
 newDiv.innerHTML = string;
