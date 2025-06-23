@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Recipe Book">
+    <meta property="og:type" content="website" />
+    <meta property="og:description"
+        content="Explore delicious, easy-to-make recipes with RecipeBook — your go-to source for comforting favorites and seasonal dishes. From classic desserts like apple crisp to everyday meals, search and discover flavorful recipes enhanced with ratings, photos, and tips. Perfect for home cooks of all skill levels. (gpt-4o)">
+    <meta property="og:image" content="https://isrejoy.github.io/wdd131/recipes/images/apple-crisp.jpg">
+    <meta property="og:url" content="https://isrejoy.github.io/wdd131/recipes/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="description"
+        content="Explore delicious, easy-to-make recipes with RecipeBook — your go-to source for comforting favorites and seasonal dishes. From classic desserts like apple crisp to everyday meals, search and discover flavorful recipes enhanced with ratings, photos, and tips. Perfect for home cooks of all skill levels. (gpt-4o)">
+    <meta name="author" content="John Zhou">
+    <title>Recipe Book</title>
+    <link rel="stylesheet" href="recipes.css">
+    <script src="recipes.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div id="websiteTitleBox">
+            <img id="recipeIcon" src="images/recipe-book.png"
+                alt="Black and white icon of a chef's hat centered inside a circular border, representing a recipe or cooking-related theme. (gpt-4o)">
+            <h1 id="websiteTitle">RecipeBook</h1>
+        </div>
+        <form id="searchBoxAndButton">
+            <input id="searchBox" type="text" placeholder="Find a recipe">
+            <div class="verticalLine"></div>
+            <input id="searchButton" type="image" src="images/search.svg"
+                alt="Simple black magnifying glass icon pointing at a slight angle, commonly used to represent search functionality. (gpt-4o)">
+        </form>
+    </header>
+    <hr class="dividingLine">
+    <main>
+        <section class="recipeSection">
+            <div class="recipeImgBox">
+                <img class="recipeImg" src="images/apple-crisp.jpg"
+                    alt="A white bowl filled with warm apple crisp topped with a scoop of vanilla ice cream, sitting on a light wooden surface. Another partially visible bowl of apple crisp and two metal spoons rest in the background. (gpt-4o)">
+            </div>
+            <div class="recipeContentBox">
+                <p class="recipeType">dessert</p>
+                <h2 class="recipeTitle">Apple Crisp</h2>
+                <span class="rating" role="img" aria-label="Rating: 4 out of 5 stars">
+                    <span aria-hidden="true" class="icon-star">⭐</span><span aria-hidden="true"
+                        class="icon-star">⭐</span><span aria-hidden="true" class="icon-star">⭐</span><span
+                        aria-hidden="true" class="icon-star-empty">⭐</span><span aria-hidden="true"
+                        class="icon-star-empty">☆</span>
+                </span>
+                <p class="recipeDescription">This apple crisp is a simple yet delicious fall dessert that's great served
+                    warm with vanilla ice cream.</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="social">
+            <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates  -->
+            <a href="#"><img src="images/instagram_icon.svg" alt="instagram icon"></a>
+            <a href="#"><img src="images/youtube_icon.svg" alt="youtube icon"></a>
+            <a href="#"><img src="images/pinterest_icon.svg" alt="pinterest icon"></a>
+        </div>
+        <a href="https://www.flaticon.com/free-icons/recipe" title="recipe icons" id="recipeIconAttribution">Recipe
+            icons created by Freepik -
+            Flaticon</a>
+    </footer>
+</body>
+
+</html>
