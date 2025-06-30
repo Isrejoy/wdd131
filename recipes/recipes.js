@@ -279,3 +279,133 @@ const recipes = [
 		rating: 4
 	}
 ]
+
+// Get a random recipe
+const randomIndex = Math.floor(Math.random()*(recipes.length));
+const randomRecipe = recipes[randomIndex];
+
+
+function createRecipe(recipe) {
+	// Create HTML without tags and stars
+	const recipeSection = document.createElement('section');
+	recipeSection.setAttribute('class', 'recipeSection');
+	recipeSection.innerHTML = `
+	<div class="recipeImgBox">
+		<img class="recipeImg" src="${recipe.image}"
+			alt="${recipe.description}">
+	</div>
+	<div class="recipeContentBox">
+		<div id="tagBox-${recipes.indexOf(recipe)}">
+		</div>
+		<h2 class="recipeTitle">${recipe.name}</h2>
+		<span id="rating-${recipes.indexOf(recipe)}" role="img" aria-label="Rating: ${recipe.rating} out of 5 stars">
+		</span>
+		<p class="recipeDescription">${recipe.description}</p>
+	</div>
+	`;
+
+	document.querySelector('main').appendChild(recipeSection);
+
+
+	// Create and render tags
+	function createTag() {
+		let content = ``;
+		for (let i = 0; i < recipe.tags.length; i++) {
+			content += `<p class="recipeType">${recipe.tags[i]}</p>`
+		}
+		document.querySelector(`#tagBox-${recipes.indexOf(recipe)}`).innerHTML = content;
+	}
+
+
+	createTag();
+
+
+
+	// Create and render stars
+	function createStars() {
+		let content = ``;
+		rating = Math.floor(recipe.rating);
+		emptyStarNumber = 5 - rating;
+		for (let i = 0; i < rating; i++) {
+			content += `<span aria-hidden="true" class="icon-star">⭐</span>`;
+		}
+		for (let i = 0; i < emptyStarNumber; i++) {
+			content += `<span aria-hidden="true" class="icon-star-empty">☆</span>`;
+		}
+		document.querySelector(`#rating-${recipes.indexOf(recipe)}`).innerHTML = content;
+	}
+
+
+	createStars();
+
+}
+
+createRecipe(randomRecipe);
+
+
+
+// Create search arrays with index
+function createSearchArrays() {
+	let searchArrays = [];
+	i = 0;
+	for (let recipe of recipes) {
+		let searchArray = [];
+		let recipeSearchObject = {};
+		for (let [key, value] of Object.entries(recipe)) {
+			if (
+				key == 'author' ||
+				key == 'description' ||
+				key == 'name'
+			) {
+				searchArray.push(value);
+			} else if (
+				key == 'tags' ||
+				key == 'recipeIngredient'
+			) {
+				for (singleItem of value) {
+					searchArray.push(singleItem);
+				}
+			}
+		}
+		recipeSearchObject.index = i;
+		recipeSearchObject.content = searchArray;
+		i += 1;
+		searchArrays.push(recipeSearchObject);
+	}
+	return searchArrays;
+}
+searchArrays = createSearchArrays();
+
+
+
+
+// Match the user input and render
+function searchAndRender() {
+	let userSearchContent = document.querySelector('#searchBox').value;
+	userSearchContent = userSearchContent.toLowerCase();
+	matchIndexArray = []
+	for (let searchContent of searchArrays) {
+		for (let singleSearchContent of searchContent.content) {
+			if (singleSearchContent.toLowerCase().includes(userSearchContent)) {
+				if (!(matchIndexArray.includes(searchContent.index))) {
+					matchIndexArray.push(searchContent.index);
+				}
+			}
+		}
+	}
+	// console.log(matchIndexArray);
+	const recipeSection = document.querySelectorAll('.recipeSection');
+	for (let i = 0; i < recipeSection.length; i++) {
+		recipeSection[i].remove();
+	}
+	for (index of matchIndexArray) {
+		createRecipe(recipes[index]);
+	}
+}
+
+
+
+
+// Execute when click
+const searchButton = document.querySelector('#searchButton');
+searchButton.addEventListener('click',searchAndRender);

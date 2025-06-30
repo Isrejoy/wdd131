@@ -74,6 +74,11 @@ body {
     font-size: 1.5em;
 }
 
+input:focus {
+    outline: none;
+}
+
+
 #searchButton {
     padding: 5px;
 }
@@ -98,15 +103,23 @@ body {
 
 .recipeImg {
     max-width: 100%;
+    /* width: 350px; */
+}
+
+.recipeContentBox > div {
+    display: flex;
+    flex-direction: row;
 }
 
 
+
 .recipeType {
-    margin: 5px 0 0 0;
+    margin: 0;
     border: 1px solid black;
     width: fit-content;
     font-size: 1.5em;
     padding: 0.2em 0.4em;
+    font-family: var(--primary-font);
 }
 
 .recipeTitle {
@@ -191,7 +204,12 @@ body {
     }
 
     .recipeTitle {
-        font-size: 1.5em;
+        font-size: 2em;
+    }
+
+    .recipeImg {
+        max-width: 350px;
+        /* width: 350px; */
     }
 
     .rating {
@@ -200,7 +218,8 @@ body {
 
     .recipeDescription {
         display: block;
-        font-size: 0.8em;
+        font-size: 1.2em;
+        font-family: var(--primary-font);
     }
 
     footer {

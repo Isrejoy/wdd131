@@ -26,7 +26,7 @@
                 alt="Black and white icon of a chef's hat centered inside a circular border, representing a recipe or cooking-related theme. (gpt-4o)">
             <h1 id="websiteTitle">RecipeBook</h1>
         </div>
-        <form id="searchBoxAndButton">
+        <form id="searchBoxAndButton" onsubmit="return false;">
             <input id="searchBox" type="text" placeholder="Find a recipe">
             <div class="verticalLine"></div>
             <input id="searchButton" type="image" src="images/search.svg"
@@ -35,13 +35,15 @@
     </header>
     <hr class="dividingLine">
     <main>
-        <section class="recipeSection">
+        <!-- <section class="recipeSection">
             <div class="recipeImgBox">
                 <img class="recipeImg" src="images/apple-crisp.jpg"
                     alt="A white bowl filled with warm apple crisp topped with a scoop of vanilla ice cream, sitting on a light wooden surface. Another partially visible bowl of apple crisp and two metal spoons rest in the background. (gpt-4o)">
             </div>
             <div class="recipeContentBox">
-                <p class="recipeType">dessert</p>
+                <div class="tagBox">
+                    <p class="recipeType">dessert</p>
+                </div>
                 <h2 class="recipeTitle">Apple Crisp</h2>
                 <span class="rating" role="img" aria-label="Rating: 4 out of 5 stars">
                     <span aria-hidden="true" class="icon-star">⭐</span><span aria-hidden="true"
@@ -52,7 +54,7 @@
                 <p class="recipeDescription">This apple crisp is a simple yet delicious fall dessert that's great served
                     warm with vanilla ice cream.</p>
             </div>
-        </section>
+        </section> -->
     </main>
     <footer>
         <div class="social">
