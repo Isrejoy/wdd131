@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Virtual Piano">
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Hello! Welcome to our website, where you can play piano songs anytime using your computer keyboard, mouse, or touchscreen. Simply press the keys shown below or click on them to start playing the piano right now!">
+    <meta property="og:image" content="https://isrejoy.github.io/wdd131/piano/images/logo_large.png">
+    <meta property="og:url" content="https://isrejoy.github.io/wdd131/piano/">
+    <meta name="twitter:card" content="Close-up illustration of a piano keyboard, showing three black keys and five white keys. The keys are viewed from above and are clearly separated, highlighting the distinctive pattern of piano keys.">
+    <meta name="description" content="Hello! Welcome to our website, where you can play piano songs anytime using your computer keyboard, mouse, or touchscreen. Simply press the keys shown below or click on them to start playing the piano right now!">
+    <meta name="author" content="John Zhou">
+    <title>Virtual Piano</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <script src="index.js" defer></script>
+</head>
+
+<body>
+    <div class="bodyMargin">
+        <header>
+            <img id="logo" src="images/logo_small.png" alt="">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="page2.html">How does this site work?</a>
+            </nav>
+        </header>
+        <main>
+            <div class="contentBox">
+                <div class="textBox">
+                    <h3>Why does it make a sound when you click a key?</h3>
+                    <p class="page2p">First, the keyboard is created using a single image. I use an image map (as
+                        described <a href="https://www.w3schools.com/html/html_images_imagemap.asp"
+                            target="_blank">here</a>) to divide the image into multiple interactive areas, each
+                        corresponding to a different key. Event listeners are then attached to these areas so that when
+                        a user clicks on a specific part of the keyboard, a function is triggered. In this function, I
+                        access the relevant piano note MP3 file, which I have included in the HTML using &lt;source&gt;
+                        tags with unique IDs. When a key is clicked, the function retrieves the appropriate audio source
+                        by its ID and plays the corresponding sound.</p>
+                </div>
+                <div class="imageBox">
+                    <img src="images/Screenshot_20250719_172756.png" alt="">
+                    <img src="images/Screenshot_20250719_172905.png" alt="">
+                    <img src="images/Screenshot_20250719_173023.png" alt="">
+                    <img src="images/Screenshot_20250719_182022.png" alt="">
+                </div>
+            </div>
+            <div class="contentBox">
+                <div class="textBox">
+                    <h3>Image Mapping</h3>
+                    <p class="page2p">Not long ago, I read an article about image mapping in HTML, which gave me the
+                        idea to split an image into different interactive sections. However, the keys on a piano
+                        keyboard are neither perfect circles nor rectangles, making conventional shapes unsuitable for
+                        mapping. Fortunately, the poly option allows you to define custom areas using coordinates. To
+                        find the precise coordinates for each key, I used a website called PhotoPea. Since the image on
+                        my webpage was resized to fit the layout, I had to adjust the original coordinates accordingly.
+                        To make this process easier, I wrote a simple Python script to scale the width and height,
+                        allowing me to quickly calculate the correct coordinates for each key.</p>
+                </div>
+                <div class="imageBox">
+                    <img src="images/frenchfood4.jpg" alt="">
+                </div>
+            </div>
+            <div class="contentBox">
+                <div class="textBox">
+                    <h3>For Loop</h3>
+                    <p class="page2p">Initially, I wrote separate play note functions for each key, which resulted in a
+                        lot of repetitive code. I wondered if I could streamline this process using a loop. With some
+                        assistance from AI, I realized it was possible. First, I created a list containing all the keys
+                        of my keyboard. Then, instead of multiple functions, I wrote a single function that takes a
+                        'key' argument. When triggered, this function uses the argument to find the corresponding audio
+                        source in the HTML, stores it in a variable, and plays the note. For the event listeners, I used
+                        a forEach loop to iterate over each key in the list, adding the appropriate event listener to
+                        each mapped area in one concise step. This approach made the code much cleaner and more
+                        efficient.</p>
+                </div>
+                <div class="imageBox">
+                    <img src="images/Screenshot_20250719_190543.png" alt="">
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="linkBox">
+                <a href="index.html">Home</a>
+                <br>
+                <a href="page2.html">How does this site work?</a>
+            </div>
+            <div class="social">
+                <a href="mailto:zhoushengjian1@gmail.com" target="_blank"><img id="gmail"
+                        src="images/gmail_icon_small.webp" alt=""></a>
+                <a href="https://www.facebook.com/" target="_blank"><img id="facebook"
+                        src="images/facebook_icon_small.webp" alt=""></a>
+                <a href="https://www.instagram.com/"><img id="instagram" src="images/instagram_icon_small.webp"
+                        alt=""></a>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

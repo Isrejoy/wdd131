@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Virtual Piano">
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Hello! Welcome to our website, where you can play piano songs anytime using your computer keyboard, mouse, or touchscreen. Simply press the keys shown below or click on them to start playing the piano right now!">
+    <meta property="og:image" content="https://isrejoy.github.io/wdd131/piano/images/logo_large.png">
+    <meta property="og:url" content="https://isrejoy.github.io/wdd131/piano/">
+    <meta name="twitter:card" content="Close-up illustration of a piano keyboard, showing three black keys and five white keys. The keys are viewed from above and are clearly separated, highlighting the distinctive pattern of piano keys.">
+    <meta name="description" content="Hello! Welcome to our website, where you can play piano songs anytime using your computer keyboard, mouse, or touchscreen. Simply press the keys shown below or click on them to start playing the piano right now!">
+    <meta name="author" content="John Zhou">
+    <title>Virtual Piano</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <script src="index.js" defer></script>
+</head>
+
+<body>
+    <div class="bodyMargin">
+        <header>
+            <img id="logo" src="images/logo_small.png" alt="">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="page2.html">How does this site work?</a>
+            </nav>
+        </header>
+        <main>
+            <h1>Virtual Piano</h1>
+            <p>Hello! Welcome to our website, where you can play piano songs anytime using your computer
+                <del>keyboard</del>, mouse, or touchscreen. Simply press the keys shown below or click on them to start
+                playing the piano right now!</p>
+            <div id="keyboardBox">
+                <img class="keyboard" usemap="#octave3" src="images/keys.webp" alt="">
+                <img class="keyboard" usemap="#octave4" src="images/keys.webp" alt="">
+                <img class="keyboard" usemap="#octave5" src="images/keys.webp" alt="">
+            </div>
+            <map name="octave3" id="octave3">
+                <area id="c3" shape="poly" coords="0,0,0,256,49,256,48,167,26,167,24,0" href="#" alt="">
+                <area id="cd3" shape="poly" coords="24,0,26,167,58,167,58,0" href="#" alt="">
+                <area id="d3" shape="poly" coords="48,0,48,167,41,167,41,256,97,256,97,167,88,167,87,0" href="#" alt="">
+                <area id="de3" shape="poly" coords="73,0,74,167,117,167,117,0" href="#" alt="">
+                <area id="e3" shape="poly" coords="96,0,96,167,81,167,81,256,146,256,145,0" href="#" alt="">
+                <area id="f3" shape="poly" coords="120,0,121,256,196,256,195,167,178,167,178,0" href="#" alt="">
+                <area id="fg3" shape="poly" coords="176,0,176,167,202,167,201,0" href="#" alt="">
+                <area id="g3" shape="poly" coords="202,0,202,167,195,167,196,256,245,256,244,167,231,167,231,0" href="#"
+                    alt="">
+                <area id="ga3" shape="poly" coords="232,0,231,167,259,167,258,0" href="#" alt="">
+                <area id="a3" shape="poly" coords="258,0,259,167,244,167,245,256,293,256,293,167,287,167,287,0" href="#"
+                    alt="">
+                <area id="ab3" shape="poly" coords="288,0,288,167,314,167,313,0" href="#" alt="">
+                <area id="b3" shape="poly" coords="313,0,314,167,293,167,293,256,341,256,341,0" href="#" alt="">
+            </map>
+            <map name="octave4" id="octave4">
+                <area id="c4" shape="poly" coords="0,0,0,256,49,256,48,167,26,167,24,0" href="#" alt="">
+                <area id="cd4" shape="poly" coords="24,0,26,167,58,167,58,0" href="#" alt="">
+                <area id="d4" shape="poly" coords="48,0,48,167,41,167,41,256,97,256,97,167,88,167,87,0" href="#" alt="">
+                <area id="de4" shape="poly" coords="73,0,74,167,117,167,117,0" href="#" alt="">
+                <area id="e4" shape="poly" coords="96,0,96,167,81,167,81,256,146,256,145,0" href="#" alt="">
+                <area id="f4" shape="poly" coords="120,0,121,256,196,256,195,167,178,167,178,0" href="#" alt="">
+                <area id="fg4" shape="poly" coords="176,0,176,167,202,167,201,0" href="#" alt="">
+                <area id="g4" shape="poly" coords="202,0,202,167,195,167,196,256,245,256,244,167,231,167,231,0" href="#"
+                    alt="">
+                <area id="ga4" shape="poly" coords="232,0,231,167,259,167,258,0" href="#" alt="">
+                <area id="a4" shape="poly" coords="258,0,259,167,244,167,245,256,293,256,293,167,287,167,287,0" href="#"
+                    alt="">
+                <area id="ab4" shape="poly" coords="288,0,288,167,314,167,313,0" href="#" alt="">
+                <area id="b4" shape="poly" coords="313,0,314,167,293,167,293,256,341,256,341,0" href="#" alt="">
+            </map>
+            <map name="octave5" id="octave5">
+                <area id="c5" shape="poly" coords="0,0,0,256,49,256,48,167,26,167,24,0" href="#" alt="">
+                <area id="cd5" shape="poly" coords="24,0,26,167,58,167,58,0" href="#" alt="">
+                <area id="d5" shape="poly" coords="48,0,48,167,41,167,41,256,97,256,97,167,88,167,87,0" href="#" alt="">
+                <area id="de5" shape="poly" coords="73,0,74,167,117,167,117,0" href="#" alt="">
+                <area id="e5" shape="poly" coords="96,0,96,167,81,167,81,256,146,256,145,0" href="#" alt="">
+                <area id="f5" shape="poly" coords="120,0,121,256,196,256,195,167,178,167,178,0" href="#" alt="">
+                <area id="fg5" shape="poly" coords="176,0,176,167,202,167,201,0" href="#" alt="">
+                <area id="g5" shape="poly" coords="202,0,202,167,195,167,196,256,245,256,244,167,231,167,231,0" href="#"
+                    alt="">
+                <area id="ga5" shape="poly" coords="232,0,231,167,259,167,258,0" href="#" alt="">
+                <area id="a5" shape="poly" coords="258,0,259,167,244,167,245,256,293,256,293,167,287,167,287,0" href="#"
+                    alt="">
+                <area id="ab5" shape="poly" coords="288,0,288,167,314,167,313,0" href="#" alt="">
+                <area id="b5" shape="poly" coords="313,0,314,167,293,167,293,256,341,256,341,0" href="#" alt="">
+            </map>
+            <audio id="c3file">
+                <source src="sounds/c3.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="cd3file">
+                <source src="sounds/c-3.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="d3file">
+                <source src="sounds/d3.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="de3file">
+                <source src="sounds/d-3.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="e3file">
+                <source src="sounds/e3.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="f3file">
+                <source src="sounds/f3.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="fg3file">
+                <source src="sounds/f-3.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="g3file">
+                <source src="sounds/g3.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="ga3file">
+                <source src="sounds/g-3.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="a3file">
+                <source src="sounds/a4.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="ab3file">
+                <source src="sounds/a-4.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="b3file">
+                <source src="sounds/b3.mp3" type="audio/mpeg">
+            </audio>
+
+            <audio id="c4file">
+                <source src="sounds/c4.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="cd4file">
+                <source src="sounds/c-4.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="d4file">
+                <source src="sounds/d4.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="de4file">
+                <source src="sounds/d-4.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="e4file">
+                <source src="sounds/e4.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="f4file">
+                <source src="sounds/f4.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="fg4file">
+                <source src="sounds/f-4.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="g4file">
+                <source src="sounds/g4.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="ga4file">
+                <source src="sounds/g-4.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="a4file">
+                <source src="sounds/a5.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="ab4file">
+                <source src="sounds/a-5.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="b4file">
+                <source src="sounds/b5.mp3" type="audio/mpeg">
+            </audio>
+
+            <audio id="c5file">
+                <source src="sounds/c5.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="cd5file">
+                <source src="sounds/c-5.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="d5file">
+                <source src="sounds/d5.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="de5file">
+                <source src="sounds/d-5.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="e5file">
+                <source src="sounds/e5.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="f5file">
+                <source src="sounds/f5.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="fg5file">
+                <source src="sounds/f-5.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="g5file">
+                <source src="sounds/g5.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="ga5file">
+                <source src="sounds/g-5.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="a5file">
+                <source src="#" type="audio/mpeg">
+            </audio>
+            <audio id="ab5file">
+                <source src="#" type="audio/mpeg">
+            </audio>
+            <audio id="b5file">
+                <source src="#" type="audio/mpeg">
+            </audio>
+        </main>
+        <footer>
+            <div class="linkBox">
+                <a href="index.html">Home</a>
+                <br>
+                <a href="page2.html">How does this site work?</a>
+            </div>
+            <div class="social">
+                <a href="mailto:zhoushengjian1@gmail.com" target="_blank"><img id="gmail"
+                        src="images/gmail_icon_small.webp" alt="Gmail Icon"></a>
+                <a href="https://www.facebook.com/" target="_blank"><img id="facebook"
+                        src="images/facebook_icon_small.webp" alt="Facebook Icon"></a>
+                <a href="https://www.instagram.com/"><img id="instagram" src="images/instagram_icon_small.webp"
+                        alt="Instagram Icon"></a>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

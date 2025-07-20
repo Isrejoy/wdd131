@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    /* change the values below to your colors from your palette */
+    --primary-color: #F8F9FA;
+    --secondary-color: #212529;
+    --accent1-color: #CED4DA;
+    --accent2-color: #6C757D;
+
+    /* change the values below to your chosen font(s) */
+    --heading-font: "Cinzel Decorative";
+    --paragraph-font: Roboto, Arial, Helvetica, sans-serif;
+
+    /* these colors below should be chosen from among your palette colors above */
+    --headline-color-on-white: var(--secondary-color);
+    /* headlines on a white background */
+    --headline-color-on-color: var(--primary-color);
+    /* headlines on a colored background */
+    --paragraph-color-on-white: var(--secondary-color);
+    /* paragraph text on a white background */
+    --paragraph-color-on-color: white;
+    /* paragraph text on a colored background */
+    --paragraph-background-color: var(--secondary-color);
+    --nav-link-color: var(--primary-color);
+    --nav-background-color: var(--secondary-color);
+    --nav-hover-link-color: var(--secondary-color);
+    --nav-hover-background-color: var(--primary-color);
+}
+
+body {
+    font-family: var(--paragraph-font);
+    margin: 0;
+}
+
+.bodyMargin {
+    width: 1024px;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+}
+
+#logo {
+    width: 72px;
+}
+
+nav {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    background-color: var(--nav-background-color);
+    border-radius: 0 0 3px 3px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--nav-link-color);
+    font-size: 1.2em;
+    line-height: 72px;
+    width: 100%;
+    text-align: center;
+    border-right: 1px solid var(--primary-color);
+    font-family: var(--heading-font);
+}
+
+nav a:hover {
+    color: var(--nav-hover-link-color);
+    background-color: var(--nav-hover-background-color);
+    border: 1px solid black;
+    border-left: none;
+    line-height: 70px;
+    /* border-radius: 0 0 3px 3px; */
+}
+
+h1 {
+    font-family: var(--heading-font);
+    color: var(--headline-color-on-white);
+    text-align: center;
+    font-size: 2.5em;
+    margin-top: 2.2em;
+    margin-bottom: 0.2em;
+}
+
+p {
+    margin: 0 7em 4.7em;
+    font-weight: 300;
+    color: #333;
+}
+
+#keyboardBox {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.keyboard {
+    height: 256px;
+    width: 100%;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 128px;
+    margin-top: 5em;
+    background-color: var(--nav-background-color);
+}
+
+.social {
+    align-self: self-end;
+    justify-self: self-end;
+    margin-bottom: 28px;
+    margin-right: 2em;
+}
+
+
+.social img {
+    width: 40px;
+    margin-left: 2px;
+}
+
+.linkBox {
+    align-self: self-end;
+    margin-bottom: 28px;
+}
+
+
+
+.linkBox a {
+    color: var(--nav-link-color);
+    text-decoration: none;
+    font-size: 1.3em;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.7em;
+    margin-left: 2em;
+}
+
+.linkBox a:hover {
+    text-decoration: underline;
+}
+
+
+/* Page 2 */
+
+.contentBox {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 4em;
+}
+
+.imageBox {
+    background-color: #1f1f1f;
+}
+
+.textBox {
+    align-self: center;
+    margin-right: 5em;
+}
+
+.imageBox img {
+    width: 500px;
+    margin-bottom: 0.6em;
+}
+
+/* .contentBox:nth-of-type(1) {
+    margin-top: 4em;
+} */
+
+
+.contentBox:nth-of-type(2) img {
+    height: 500px;
+    object-position: 0 0;
+    object-fit: cover;
+}
+
+.contentBox:nth-of-type(2) .textBox {
+    align-self: self-start;
+    margin-top: 5em;
+}
+
+/* .imageBox img:last-child {
+    margin-bottom: 0;
+} */
+
+.page2p {
+    margin: 0;
+}
+
+h3 {
+    margin-top: 0;
+}
